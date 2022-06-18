@@ -52,7 +52,7 @@ void print_pal_error(VL53L0X_Error Status)
 {
     char buf[VL53L0X_MAX_STRING_LENGTH];
     VL53L0X_GetPalErrorString(Status, buf);
-    if(buf != 'No Error')
+    if(Status != 0)
     {
         printf("API Status: %i : %s\n", Status, buf);
     }
